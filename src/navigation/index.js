@@ -1,18 +1,24 @@
-
-import { createAppContainer } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation-stack'
-import MainScreen from '../screens/MainScreen'
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
+import IndexScreen from "../screens";
+import HomeScreen from "../screens/home/index";
 
 const StackNavigator = createStackNavigator(
   {
-    MainScreen: {
-      screen: MainScreen
-    }
+    IndexScreen: {
+      screen: IndexScreen,
+    },
+    HomeScreen: {
+      screen: HomeScreen,
+    },
   },
   {
-    initialRouteName: 'MainScreen',
-    headerMode: 'none'
+    initialRouteName: "IndexScreen",
+    headerMode: "none",
+    defaultNavigationOptions: {
+      cardStyle: { backgroundColor: "#FFF" },
+    },
   }
-)
+);
 
-export default createAppContainer(StackNavigator)
+export default createAppContainer(StackNavigator);
