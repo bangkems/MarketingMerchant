@@ -3,10 +3,11 @@ import { BottomNavigation, Text } from "react-native-paper";
 import { tw } from "react-native-tailwindcss";
 import Header from "./Header";
 import Home from "../screens/home";
+import Referral from "../screens/referral";
 
-const HomeRoute = () => <Home></Home>;
+const HomeRoute = () => <Home />;
 
-const AlbumsRoute = () => <Text>Albums</Text>;
+const ReferralRoute = () => <Referral />;
 
 const RecentsRoute = () => <Text>Recents</Text>;
 
@@ -15,7 +16,7 @@ export default class MyComponent extends React.Component {
     index: 0,
     routes: [
       { key: "home", title: "Home", icon: "home" },
-      { key: "albums", title: "Albums", icon: "alert-circle" },
+      { key: "referral", title: "Referral", icon: "link" },
       { key: "recents", title: "Recents", icon: "alert-circle" },
     ],
   };
@@ -24,7 +25,7 @@ export default class MyComponent extends React.Component {
 
   _renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
-    albums: AlbumsRoute,
+    referral: ReferralRoute,
     recents: RecentsRoute,
   });
 

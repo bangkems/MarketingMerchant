@@ -10,8 +10,8 @@ export default class landing extends Component {
     return (
       <>
         <View style={[tw.mB3]}>
-          <View style={[tw.flex, tw.flexRow, tw.mY3]}>
-            <View style={[tw.m4, tw.flexGrow, tw.itemsCenter]}>
+          <View style={[tw.flex, tw.flexRow, tw.mY5]}>
+            <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
               <IconButton
                 icon="airplane"
                 color={color.indigo400}
@@ -22,7 +22,7 @@ export default class landing extends Component {
                 Travelling
               </Paragraph>
             </View>
-            <View style={[tw.m4, tw.flexGrow, tw.itemsCenter]}>
+            <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
               <IconButton
                 icon="food"
                 color={color.indigo400}
@@ -33,7 +33,7 @@ export default class landing extends Component {
                 Makanan
               </Paragraph>
             </View>
-            <View style={[tw.m4, tw.flexGrow, tw.itemsCenter]}>
+            <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
               <IconButton
                 icon="hanger"
                 color={color.indigo400}
@@ -44,8 +44,19 @@ export default class landing extends Component {
                 Fashion
               </Paragraph>
             </View>
+            <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
+              <IconButton
+                icon="dots-horizontal"
+                color={color.indigo400}
+                size={40}
+                onPress={() => console.log("more Pressed")}
+              />
+              <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
+                More
+              </Paragraph>
+            </View>
           </View>
-          <Text style={[tw.mB2, tw.text2xl, tw.fontBold, tw.textGray800]}>
+          <Text style={[tw.mT3, tw.text2xl, tw.fontBold, tw.textGray800]}>
             Penawaran terbaru
           </Text>
           <ScrollView horizontal style={[tw._mX5]}>
