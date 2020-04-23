@@ -1,10 +1,11 @@
 import React from "react";
 import Menu from "../components/Menu";
 
-function index() {
+function index({ navigation }) {
+  console.log(navigation);
   return (
     <>
-      <Menu />
+      <Menu nav={navigation} />
     </>
   );
 }

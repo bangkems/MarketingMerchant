@@ -1,6 +1,7 @@
 import React from "react";
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import AppNavigator from "./src/navigation";
+import NavigationService from "./src/navigation/NavigationService";
 
 const theme = {
   ...DefaultTheme,
@@ -14,7 +15,11 @@ const theme = {
 export default function App() {
   return (
     <PaperProvider theme={theme}>
-      <AppNavigator />
+      <AppNavigator
+        ref={(navigatorRef) => {
+          NavigationService.setTopLevelNavigator(navigatorRef);
+        }}
+      />
     </PaperProvider>
   );
 }

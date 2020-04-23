@@ -1,6 +1,5 @@
 import * as React from "react";
 import { BottomNavigation, Text } from "react-native-paper";
-import { tw } from "react-native-tailwindcss";
 import Header from "./Header";
 import Home from "../screens/home";
 import Referral from "../screens/referral";
@@ -32,7 +31,10 @@ export default class MyComponent extends React.Component {
   render() {
     return (
       <>
-        <Header titleText={this.state.routes[this.state.index].title} />
+        <Header
+          titleText={this.state.routes[this.state.index].title}
+          hideBackButton={true}
+        />
         <BottomNavigation
           navigationState={this.state}
           onIndexChange={this._handleIndexChange}

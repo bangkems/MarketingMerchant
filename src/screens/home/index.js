@@ -21,7 +21,10 @@ export default class index extends Component {
     return (
       <>
         <SafeAreaView>
-          <ScrollView style={tw.bgPurple800}>
+          <ScrollView
+            style={tw.bgPurple800}
+            showsVerticalScrollIndicator={false}
+          >
             <View style={[tw.bgWhite]}>
               <View style={[tw.bgPurple800, tw.pX5, tw.pT4]}>
                 <Text

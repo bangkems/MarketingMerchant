@@ -4,8 +4,9 @@ import { Card, Paragraph, IconButton, Badge } from "react-native-paper";
 import { color, tw } from "react-native-tailwindcss";
 import Timeline from "../../components/Timeline";
 import { ScrollView } from "react-native-gesture-handler";
+import NavigationService from "../../navigation/NavigationService";
 
-export default class landing extends Component {
+export class landing extends Component {
   render() {
     return (
       <>
@@ -49,7 +50,7 @@ export default class landing extends Component {
                 icon="dots-horizontal"
                 color={color.indigo400}
                 size={40}
-                onPress={() => console.log("more Pressed")}
+                onPress={() => NavigationService.navigate("OfferScreen")}
               />
               <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
                 More
@@ -59,7 +60,11 @@ export default class landing extends Component {
           <Text style={[tw.mT3, tw.text2xl, tw.fontBold, tw.textGray800]}>
             Penawaran terbaru
           </Text>
-          <ScrollView horizontal style={[tw._mX5]}>
+          <ScrollView
+            horizontal
+            style={[tw._mX5]}
+            showsHorizontalScrollIndicator={false}
+          >
             <View style={[tw.mX2]} />
             <Card style={[tw.mX2, tw.mY4, tw.shadowMd, tw.roundedLg]}>
               <Card.Content>
@@ -146,3 +151,5 @@ export default class landing extends Component {
     );
   }
 }
+
+export default landing;
