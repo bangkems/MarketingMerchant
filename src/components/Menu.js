@@ -1,5 +1,6 @@
 import * as React from "react";
 import { BottomNavigation, Text } from "react-native-paper";
+import { tw } from "react-native-tailwindcss";
 import Header from "./Header";
 import Home from "../screens/home";
 

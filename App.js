@@ -7,7 +7,7 @@ const theme = {
   roundness: 2,
   colors: {
     ...DefaultTheme.colors,
-    background: "#ffffff",
+    primary: "#553c9a",
   },
 };
 

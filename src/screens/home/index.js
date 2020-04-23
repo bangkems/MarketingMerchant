@@ -21,28 +21,35 @@ export default class index extends Component {
     return (
       <>
         <SafeAreaView>
-          <ScrollView>
-            <View style={tw.mX5}>
-              <View style={[tw.mT8, tw.mB3]}>
+          <ScrollView style={tw.bgPurple800}>
+            <View style={[tw.bgWhite]}>
+              <View style={[tw.bgPurple800, tw.pX5, tw.pT4]}>
                 <Text
                   style={[
+                    tw.mB3,
                     tw.text3xl,
                     tw.fontBold,
-                    tw.textGray800,
+                    tw.textPurple100,
                     tw.trackingTight,
                   ]}
                 >
                   {" "}
                   Selamat Datang, Andi!{" "}
                 </Text>
+                <Searchbar
+                  placeholder="Cari offer terbaru"
+                  onChangeText={this._onChangeSearch}
+                  value={searchQuery}
+                  style={[
+                    tw._mB3,
+                    tw.mT1,
+                    tw.shadow,
+                    tw.border,
+                    tw.borderGray100,
+                  ]}
+                />
               </View>
-              <Searchbar
-                placeholder="Cari offer terbaru"
-                onChangeText={this._onChangeSearch}
-                value={searchQuery}
-                style={[tw.mT3, tw.shadow, tw.border, tw.borderGray100]}
-              />
-              {this.displayResult()}
+              <View style={[tw.pX5]}>{this.displayResult()}</View>
             </View>
           </ScrollView>
         </SafeAreaView>
