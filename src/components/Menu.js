@@ -34,6 +34,7 @@ export default class MyComponent extends React.Component {
         <Header
           titleText={this.state.routes[this.state.index].title}
           hideBackButton={true}
+          hideActionButton={true}
         />
         <BottomNavigation
           navigationState={this.state}

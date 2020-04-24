@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
-import { Card, Badge, IconButton, Paragraph } from "react-native-paper";
-import { color, tw } from "react-native-tailwindcss";
+import { tw } from "react-native-tailwindcss";
+import { Chip } from "react-native-paper";
 import Offer from "../../components/Offer";
 
 export default class results extends Component {

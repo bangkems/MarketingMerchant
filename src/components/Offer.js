@@ -5,7 +5,16 @@ import { color, tw } from "react-native-tailwindcss";
 export default class Offer extends Component {
   render() {
     return (
-      <Card style={[tw.mX2, tw.mY4, tw.shadowMd, tw.roundedLg]}>
+      <Card
+        style={[
+          tw.mX2,
+          tw.mY4,
+          tw.shadowMd,
+          tw.border2,
+          tw.borderPurple300,
+          tw.roundedLg,
+        ]}
+      >
         <Card.Content>
           <View style={[tw.textXl, tw.mT4]}>
             <Text style={[tw.textLg, tw.fontBold, tw.textGray800]}>

@@ -6,6 +6,7 @@ import Timeline from "../../components/Timeline";
 import Offer from "../../components/Offer";
 import { ScrollView } from "react-native-gesture-handler";
 import NavigationService from "../../navigation/NavigationService";
+import Results from "./results";
 
 export class landing extends Component {
   render() {
@@ -18,10 +19,14 @@ export class landing extends Component {
                 icon="airplane"
                 color={color.indigo400}
                 size={40}
-                onPress={() => console.log("airplane Pressed")}
+                onPress={() =>
+                  NavigationService.navigate("OfferScreen", {
+                    tags: "travel",
+                  })
+                }
               />
               <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
-                Travelling
+                Travel
               </Paragraph>
             </View>
             <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
@@ -29,7 +34,11 @@ export class landing extends Component {
                 icon="food"
                 color={color.indigo400}
                 size={40}
-                onPress={() => console.log("food Pressed")}
+                onPress={() =>
+                  NavigationService.navigate("OfferScreen", {
+                    tags: "makanan",
+                  })
+                }
               />
               <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
                 Makanan
@@ -40,7 +49,11 @@ export class landing extends Component {
                 icon="hanger"
                 color={color.indigo400}
                 size={40}
-                onPress={() => console.log("hanger Pressed")}
+                onPress={() =>
+                  NavigationService.navigate("OfferScreen", {
+                    tags: "Fashion",
+                  })
+                }
               />
               <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
                 Fashion
@@ -51,7 +64,11 @@ export class landing extends Component {
                 icon="dots-horizontal"
                 color={color.indigo400}
                 size={40}
-                onPress={() => NavigationService.navigate("OfferScreen")}
+                onPress={() =>
+                  NavigationService.navigate("OfferScreen", {
+                    tags: "",
+                  })
+                }
               />
               <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
                 More
