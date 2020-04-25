@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
-import { Paragraph, IconButton, Badge } from "react-native-paper";
+import { Paragraph, IconButton, Card, Button, List } from "react-native-paper";
 import { color, tw } from "react-native-tailwindcss";
-import Timeline from "../../components/Timeline";
 import Offer from "../../components/Offer";
-import { ScrollView } from "react-native-gesture-handler";
 import NavigationService from "../../navigation/NavigationService";
-import Results from "./results";
-
 export class landing extends Component {
   render() {
     return (
@@ -75,26 +71,84 @@ export class landing extends Component {
               </Paragraph>
             </View>
           </View>
-          <Text style={[tw.mT3, tw.text2xl, tw.fontBold, tw.textGray800]}>
-            Penawaran terbaru
-          </Text>
-          <ScrollView
-            horizontal
-            style={[tw._mX5]}
-            showsHorizontalScrollIndicator={false}
-          >
-            <View style={[tw.mX2]} />
+          <View>
+            <Text
+              style={[tw.mT3, tw.mB2, tw.text2xl, tw.fontBold, tw.textGray700]}
+            >
+              Penawaran terbaru
+            </Text>
             <Offer></Offer>
             <Offer></Offer>
             <Offer></Offer>
-            <View style={[tw.mX2]} />
-          </ScrollView>
-        </View>
-        <View style={[tw.mT8]}>
-          <Text style={[tw.mB2, tw.text2xl, tw.fontBold, tw.textGray800]}>
-            Aktivitas terakhir
-          </Text>
-          <Timeline></Timeline>
+            <Button style={[tw.mY2]}>Lihat semua penawaran</Button>
+          </View>
+          <View>
+            <Text
+              style={[tw.mT3, tw.mB2, tw.text2xl, tw.fontBold, tw.textGray700]}
+            >
+              Panduan
+            </Text>
+            <Card
+              style={[
+                tw.mX2,
+                tw.mY2,
+                tw.shadowMd,
+                tw.border2,
+                tw.borderPurple300,
+                tw.roundedLg,
+              ]}
+            >
+              <Card.Content>
+                <List.Item
+                  title="Dapatkan lebih banyak"
+                  left={(props) => (
+                    <List.Icon {...props} icon="gift" style={[tw.mX0]} />
+                  )}
+                  right={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="chevron-right"
+                      style={[tw.mX0]}
+                    />
+                  )}
+                  style={[tw.borderB, tw.borderGray200]}
+                  onPress={() =>
+                    NavigationService.navigate("OfferScreen", {
+                      tags: "travel",
+                    })
+                  }
+                />
+                <List.Item
+                  title="Word of mouth"
+                  left={(props) => (
+                    <List.Icon {...props} icon="thumb-up" style={[tw.mX0]} />
+                  )}
+                  right={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="chevron-right"
+                      style={[tw.mX0]}
+                    />
+                  )}
+                  style={[tw.borderB, tw.borderGray200]}
+                />
+                <List.Item
+                  title="Membangun Audiens"
+                  left={(props) => (
+                    <List.Icon {...props} icon="bullhorn" style={[tw.mX0]} />
+                  )}
+                  right={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="chevron-right"
+                      style={[tw.mX0]}
+                    />
+                  )}
+                  style={[tw.borderGray200]}
+                />
+              </Card.Content>
+            </Card>
+          </View>
         </View>
       </>
     );

@@ -8,7 +8,7 @@ export default class Offer extends Component {
       <Card
         style={[
           tw.mX2,
-          tw.mY4,
+          tw.mY1,
           tw.shadowMd,
           tw.border2,
           tw.borderPurple300,
@@ -16,15 +16,10 @@ export default class Offer extends Component {
         ]}
       >
         <Card.Content>
-          <View style={[tw.textXl, tw.mT4]}>
-            <Text style={[tw.textLg, tw.fontBold, tw.textGray800]}>
+          <View style={[tw.mB4]}>
+            <Text style={[tw.textXl, tw.fontBold, tw.textGray800]}>
               Ripped Jeans Company
             </Text>
-          </View>
-          <View style={[tw.flexRow, tw.mB4, tw.mT1]}>
-            <Badge style={[tw.pX2, tw.mR1]}>Fashion</Badge>
-            <Badge style={[tw.pX2, tw.mR1]}>Tekstil</Badge>
-            <Badge style={[tw.pX2, tw.mR1]}>Kulit</Badge>
           </View>
           <View style={[tw.flexRow, tw.justifyBetween, tw.itemsCenter]}>
             <View style={[tw.flexCol]}>

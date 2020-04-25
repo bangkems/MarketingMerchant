@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
 import { tw } from "react-native-tailwindcss";
-import { Chip } from "react-native-paper";
+import { Button } from "react-native-paper";
 import Offer from "../../components/Offer";
 
 export default class results extends Component {
@@ -9,9 +9,25 @@ export default class results extends Component {
     return (
       <>
         <View style={[tw.mB3]}>
-          <Text style={[tw.textXl, tw.textGray600, tw.mT10]}>
-            Hasil penulusuran untuk "{this.props.query}"
-          </Text>
+          <View style={[tw.flexRow, tw.mT5]}>
+            <Text style={[tw.textXl, tw.textGray600]}>Urutkan:</Text>
+            <Button mode="outlined" onPress={() => console.log("Pressed")}>
+              Tertinggi
+            </Button>
+            <Button mode="outlined" onPress={() => console.log("Pressed")}>
+              Tertinggi
+            </Button>
+          </View>
+
+          <View style={[tw.flexRow, tw.mT10]}>
+            <Text style={[tw.textXs, tw.textGray600]}>
+              Menampilkan 3 penawaran untuk
+            </Text>
+            <Text style={[tw.textXs, tw.fontMedium]}>
+              {" "}
+              "{this.props.query}"
+            </Text>
+          </View>
           <Offer></Offer>
           <Offer></Offer>
           <Offer></Offer>
