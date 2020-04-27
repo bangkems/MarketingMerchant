@@ -14,14 +14,14 @@ export class landing extends Component {
               <IconButton
                 icon="airplane"
                 color={color.indigo400}
-                size={40}
+                size={30}
                 onPress={() =>
                   NavigationService.navigate("OfferScreen", {
                     tags: "travel",
                   })
                 }
               />
-              <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
+              <Paragraph style={[tw.textIndigo600, tw.textSm, tw.fontMedium]}>
                 Travel
               </Paragraph>
             </View>
@@ -29,14 +29,14 @@ export class landing extends Component {
               <IconButton
                 icon="food"
                 color={color.indigo400}
-                size={40}
+                size={30}
                 onPress={() =>
                   NavigationService.navigate("OfferScreen", {
                     tags: "makanan",
                   })
                 }
               />
-              <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
+              <Paragraph style={[tw.textIndigo600, tw.textSm, tw.fontMedium]}>
                 Makanan
               </Paragraph>
             </View>
@@ -44,14 +44,14 @@ export class landing extends Component {
               <IconButton
                 icon="hanger"
                 color={color.indigo400}
-                size={40}
+                size={30}
                 onPress={() =>
                   NavigationService.navigate("OfferScreen", {
                     tags: "Fashion",
                   })
                 }
               />
-              <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
+              <Paragraph style={[tw.textIndigo600, tw.textSm, tw.fontMedium]}>
                 Fashion
               </Paragraph>
             </View>
@@ -59,14 +59,14 @@ export class landing extends Component {
               <IconButton
                 icon="dots-horizontal"
                 color={color.indigo400}
-                size={40}
+                size={30}
                 onPress={() =>
                   NavigationService.navigate("OfferScreen", {
                     tags: "",
                   })
                 }
               />
-              <Paragraph style={[tw.textIndigo600, tw.fontMedium]}>
+              <Paragraph style={[tw.textIndigo600, tw.textSm, tw.fontMedium]}>
                 More
               </Paragraph>
             </View>
