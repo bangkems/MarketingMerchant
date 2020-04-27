@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
-import { Card, Badge, IconButton } from "react-native-paper";
+import { Card, Button, IconButton } from "react-native-paper";
 import { color, tw } from "react-native-tailwindcss";
+import NavigationService from "../navigation/NavigationService";
 export default class Offer extends Component {
   render() {
     return (
@@ -14,6 +15,11 @@ export default class Offer extends Component {
           tw.borderPurple300,
           tw.roundedLg,
         ]}
+        onPress={() =>
+          NavigationService.navigate("OfferDetail", {
+            tags: "",
+          })
+        }
       >
         <Card.Content>
           <View style={[tw.mB4]}>

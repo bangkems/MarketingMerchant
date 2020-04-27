@@ -3,6 +3,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import IndexScreen from "../screens";
 import HomeScreen from "../screens/home/index";
 import OfferScreen from "../screens/offer/index";
+import OfferDetail from "../screens/offer/detail";
 
 const StackNavigator = createStackNavigator(
   {
@@ -11,6 +12,9 @@ const StackNavigator = createStackNavigator(
     },
     OfferScreen: {
       screen: OfferScreen,
+    },
+    OfferDetail: {
+      screen: OfferDetail,
     },
   },
   {
