@@ -9,7 +9,7 @@ export default class Example extends React.Component {
     return (
       <View style={[styles.panel, tw.pX6, tw.pT2]}>
         <View>
-          <Text style={[styles.panelTitle, tw.fontMedium, tw.textGray900]}>
+          <Text style={[tw.text2xl, tw.fontMedium, tw.textGray900]}>
             Bagikan ke teman
           </Text>
           <Text style={[tw.textGray600]}>Berikan kupon serta ulasanmu</Text>
@@ -20,7 +20,10 @@ export default class Example extends React.Component {
           >
             <View style={[tw.mR5]}></View>
             <View style={[tw.mR6, tw.itemsCenter]}>
-              <TouchableOpacity onPress={() => console.log("copy pressed")}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => console.log("copy pressed")}
+              >
                 <View
                   style={{
                     paddingTop: 11,
@@ -35,10 +38,11 @@ export default class Example extends React.Component {
                 </View>
               </TouchableOpacity>
 
-              <Text style={[tw.mT2, tw.textGray800]}>Copy</Text>
+              <Text style={[tw.mT2, tw.textGray800, tw.textXs]}>Copy</Text>
             </View>
             <View style={[tw.mR6, tw.itemsCenter]}>
               <TouchableOpacity
+                activeOpacity={0.6}
                 onPress={() => console.log("instagram pressed")}
               >
                 <Image
@@ -49,10 +53,13 @@ export default class Example extends React.Component {
                   }}
                 />
               </TouchableOpacity>
-              <Text style={[tw.mT2, tw.textGray800]}>Instagram</Text>
+              <Text style={[tw.mT2, tw.textGray800, tw.textXs]}>Instagram</Text>
             </View>
             <View style={[tw.mR6, tw.itemsCenter]}>
-              <TouchableOpacity onPress={() => console.log("whatsapp pressed")}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => console.log("whatsapp pressed")}
+              >
                 <Image
                   style={{ width: 60, height: 60, borderRadius: 12 }}
                   source={{
@@ -61,10 +68,13 @@ export default class Example extends React.Component {
                   }}
                 />
               </TouchableOpacity>
-              <Text style={[tw.mT2, tw.textGray800]}>Whatsapp</Text>
+              <Text style={[tw.mT2, tw.textGray800, tw.textXs]}>Whatsapp</Text>
             </View>
             <View style={[tw.mR6, tw.itemsCenter]}>
-              <TouchableOpacity onPress={() => console.log("twitter pressed")}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => console.log("twitter pressed")}
+              >
                 <Image
                   style={{ width: 60, height: 60, borderRadius: 12 }}
                   source={{
@@ -73,10 +83,13 @@ export default class Example extends React.Component {
                   }}
                 />
               </TouchableOpacity>
-              <Text style={[tw.mT2, tw.textGray800]}>Twitter</Text>
+              <Text style={[tw.mT2, tw.textGray800, tw.textXs]}>Twitter</Text>
             </View>
             <View style={[tw.mR6, tw.itemsCenter]}>
-              <TouchableOpacity onPress={() => console.log("telegram pressed")}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => console.log("telegram pressed")}
+              >
                 <Image
                   style={[{ width: 60, height: 60, borderRadius: 12 }]}
                   source={{
@@ -85,10 +98,13 @@ export default class Example extends React.Component {
                   }}
                 />
               </TouchableOpacity>
-              <Text style={[tw.mT2, tw.textGray800]}>Telegram</Text>
+              <Text style={[tw.mT2, tw.textGray800, tw.textXs]}>Telegram</Text>
             </View>
             <View style={[tw.mR6, tw.itemsCenter]}>
-              <TouchableOpacity onPress={() => console.log("facebook pressed")}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => console.log("facebook pressed")}
+              >
                 <Image
                   style={[{ width: 60, height: 60, borderRadius: 12 }]}
                   source={{
@@ -97,10 +113,11 @@ export default class Example extends React.Component {
                   }}
                 />
               </TouchableOpacity>
-              <Text style={[tw.mT2, tw.textGray800]}>Facebook</Text>
+              <Text style={[tw.mT2, tw.textGray800, tw.textXs]}>Facebook</Text>
             </View>
             <View style={[tw.mR6, tw.itemsCenter]}>
               <TouchableOpacity
+                activeOpacity={0.6}
                 onPress={() => console.log("messenger pressed")}
               >
                 <Image
@@ -111,7 +128,7 @@ export default class Example extends React.Component {
                   }}
                 />
               </TouchableOpacity>
-              <Text style={[tw.mT2, tw.textGray800]}>Messenger</Text>
+              <Text style={[tw.mT2, tw.textGray800, tw.textXs]}>Messenger</Text>
             </View>
           </ScrollView>
         </View>
@@ -146,8 +163,12 @@ const styles = StyleSheet.create({
     right: 0,
   },
   panel: {
-    height: 470,
+    height: 305,
     backgroundColor: "#ffffffee",
+    marginLeft: 10,
+    marginRight: 10,
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
   },
   header: {
     backgroundColor: "#f7f5eee8",
@@ -167,8 +188,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   panelTitle: {
-    fontSize: 27,
-    height: 35,
+    fontSize: 25,
+    height: 30,
   },
   panelSubtitle: {
     fontSize: 14,

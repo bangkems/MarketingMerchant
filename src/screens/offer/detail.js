@@ -38,7 +38,7 @@ function index({ navigation }) {
       <View style={{ flex: 1, backgroundColor: "#2c2c2f" }}>
         <BottomSheet
           ref={bs}
-          snapPoints={[0, 250, 350]}
+          snapPoints={[0, 220, 350]}
           renderContent={() => <ActionSheetInner />}
           renderHeader={() => <ActionSheetHeader />}
           callbackNode={fall}
@@ -64,7 +64,7 @@ function index({ navigation }) {
           }}
         >
           <TouchableWithoutFeedback onPress={handleOutsidePress}>
-            <Card>
+            <Card style={[tw.mB8]}>
               <Card.Title
                 title="Ripped Jeans Company"
                 subtitle="Bandung, Jawa Barat"
@@ -133,47 +133,57 @@ function index({ navigation }) {
             </Card>
           </TouchableWithoutFeedback>
         </Animated.ScrollView>
-        <TouchableOpacity
-          style={[tw.absolute, tw.bottom0, tw.right0, tw.left0, tw.shadowMd]}
-          activeOpacity={0.9}
-          onPress={() => {
-            bs.current.snapTo(1);
-            bs.current.snapTo(1);
+        <Animated.View
+          onPress={handleOutsidePress}
+          style={{
+            backgroundColor: "#fff",
+            opacity: Animated.add(0.1, Animated.multiply(fall, 0.9)),
           }}
         >
-          <View
-            style={[
-              tw.absolute,
-              tw.bottom0,
-              tw.right0,
-              tw.left0,
-              tw.bgWhite,
-              tw.opacity75,
-              tw.h16,
-            ]}
-          ></View>
-          <View
-            style={[
-              tw.flexRow,
-              tw.justifyCenter,
-              tw.itemsCenter,
-              tw.bgPurple700,
-              tw.pY2,
-              tw.rounded,
-              tw.m3,
-            ]}
+          <TouchableOpacity
+            style={[tw.absolute, tw.bottom0, tw.right0, tw.left0, tw.shadowMd]}
+            activeOpacity={0.9}
+            onPress={() => {
+              bs.current.snapTo(1);
+              bs.current.snapTo(1);
+            }}
           >
-            <Ionicons
-              style={[tw.mR2]}
-              name="ios-share"
-              size={25}
-              color={color.purple200}
-            />
-            <Text style={[tw.textPurple100, tw.fontBold, tw.textBase, tw.pT1]}>
-              BAGIKAN
-            </Text>
-          </View>
-        </TouchableOpacity>
+            <View
+              style={[
+                tw.absolute,
+                tw.bottom0,
+                tw.right0,
+                tw.left0,
+                tw.bgWhite,
+                tw.opacity75,
+                tw.h16,
+              ]}
+            ></View>
+            <View
+              style={[
+                tw.flexRow,
+                tw.justifyCenter,
+                tw.itemsCenter,
+                tw.bgPurple700,
+                tw.pY2,
+                tw.rounded,
+                tw.m3,
+              ]}
+            >
+              <Ionicons
+                style={[tw.mR2]}
+                name="ios-share"
+                size={25}
+                color={color.purple200}
+              />
+              <Text
+                style={[tw.textPurple100, tw.fontBold, tw.textBase, tw.pT1]}
+              >
+                BAGIKAN
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </Animated.View>
       </View>
     </>
   );
