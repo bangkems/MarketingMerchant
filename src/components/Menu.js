@@ -3,12 +3,13 @@ import { BottomNavigation, Text } from "react-native-paper";
 import Header from "./Header";
 import Home from "../screens/home";
 import Referral from "../screens/referral";
+import Reward from "../screens/reward";
 
 const HomeRoute = () => <Home />;
 
 const ReferralRoute = () => <Referral />;
 
-const RecentsRoute = () => <Text>Recents</Text>;
+const RewardRoute = () => <Reward />;
 
 export default class MyComponent extends React.Component {
   state = {
@@ -16,7 +17,7 @@ export default class MyComponent extends React.Component {
     routes: [
       { key: "home", title: "Home", icon: "home" },
       { key: "referral", title: "Referral", icon: "link" },
-      { key: "recents", title: "Recents", icon: "alert-circle" },
+      { key: "reward", title: "My Rewards", icon: "gift" },
     ],
   };
 
@@ -25,7 +26,7 @@ export default class MyComponent extends React.Component {
   _renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
     referral: ReferralRoute,
-    recents: RecentsRoute,
+    reward: RewardRoute,
   });
 
   render() {
