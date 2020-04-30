@@ -161,12 +161,13 @@ function index({ navigation }) {
               right: 0,
               left: 0,
               backgroundColor: "#fff",
-              height: 60,
-              opacity: Animated.sub(Animated.multiply(fall, 0.6), 0.1),
+              height: 75,
+              opacity: Animated.sub(Animated.multiply(fall, 0.9), 0.1),
             }}
           />
           <View
             style={[
+              tw.shadowLg,
               tw.flexRow,
               tw.justifyCenter,
               tw.itemsCenter,
@@ -193,12 +194,6 @@ function index({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  fab: {
-    position: "absolute",
-    margin: 16,
-    right: 0,
-    bottom: 0,
-  },
   header: {
     backgroundColor: "#f7f5eee8",
     shadowColor: "#000000",
