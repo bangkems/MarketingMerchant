@@ -45,7 +45,7 @@ export default class index extends Component {
                     icon="history"
                     size={30}
                     color={color.indigo100}
-                    style={[tw.textWhite, tw.pB2, tw.m0]}
+                    style={[tw.pB2, tw.m0]}
                   />
                 </View>
                 <Searchbar
