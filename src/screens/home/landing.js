@@ -8,7 +8,7 @@ export class landing extends Component {
   render() {
     return (
       <>
-        <View style={[tw.mB3]}>
+        <View style={[tw.mB3, tw.mX4]}>
           <View style={[tw.flex, tw.flexRow, tw.mY5]}>
             <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
               <IconButton

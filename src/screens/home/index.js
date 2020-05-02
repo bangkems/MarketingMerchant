@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { SafeAreaView, ScrollView, Text, View } from "react-native";
+import { SafeAreaView, ScrollView, Text, View, StyleSheet } from "react-native";
 import Landing from "./landing";
 import Results from "./results";
 import { color, tw } from "react-native-tailwindcss";
-import { Searchbar, IconButton } from "react-native-paper";
+import { Searchbar, IconButton, Surface } from "react-native-paper";
 
 export default class index extends Component {
   state = {
@@ -22,10 +22,10 @@ export default class index extends Component {
       <>
         <SafeAreaView>
           <ScrollView
-            style={tw.bgPurple800}
+            style={[tw.bgPurple800, tw.minHFull]}
             showsVerticalScrollIndicator={false}
           >
-            <View style={[tw.bgWhite]}>
+            <View style={[tw.bgWhite, tw.minHFull]}>
               <View style={[tw.bgPurple800, tw.pX4, tw.pT4]}>
                 <Text style={[tw.textXl, tw.fontMedium, tw.textPurple100]}>
                   Poin anda
@@ -52,18 +52,15 @@ export default class index extends Component {
                   placeholder="Cari offer terbaru"
                   onChangeText={this._onChangeSearch}
                   value={searchQuery}
-                  style={[
-                    tw._mB3,
-                    tw.mT1,
-                    tw.shadow,
-                    tw.border,
-                    tw.borderGray100,
-                  ]}
+                  style={[tw._mB3, tw.mT1, tw.rounded]}
                 />
               </View>
-              <View style={[tw.pX4]}>{this.displayResult()}</View>
+              {this.displayResult()}
             </View>
           </ScrollView>
+          {/* <Provider>
+            <Portal>{this.displayFABFilter()}</Portal>
+          </Provider> */}
         </SafeAreaView>
       </>
     );
@@ -76,4 +73,21 @@ export default class index extends Component {
       return <Results query={this.state.searchQuery}></Results>;
     }
   }
+  // displayFABFilter() {
+  //   if (!this.hideResult) {
+  //     return (
+  //       <View style={[tw.absolute, tw.bottom0, tw.right0, tw.left0]}>
+  //         <View style={[tw.flex, tw.itemsCenter]}>
+  //           <FAB
+  //             small
+  //             label="Filter"
+  //             icon="filter-variant"
+  //             onPress={this._onStateChange}
+  //             style={[tw.w4_12, tw.m3]}
+  //           />
+  //         </View>
+  //       </View>
+  //     );
+  //   }
+  // }
 }
