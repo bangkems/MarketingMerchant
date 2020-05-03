@@ -4,12 +4,15 @@ import Header from "./Header";
 import Home from "../screens/home";
 import Referral from "../screens/referral";
 import Reward from "../screens/reward";
+import Profile from "../screens/profile";
 
 const HomeRoute = () => <Home />;
 
 const ReferralRoute = () => <Referral />;
 
 const RewardRoute = () => <Reward />;
+
+const ProfileRoute = () => <Profile />;
 
 export default class MyComponent extends React.Component {
   state = {
@@ -18,6 +21,7 @@ export default class MyComponent extends React.Component {
       { key: "home", title: "Home", icon: "home" },
       { key: "referral", title: "Referral", icon: "link" },
       { key: "reward", title: "My Rewards", icon: "gift" },
+      { key: "profile", title: "My Profile", icon: "face" },
     ],
   };
 
@@ -27,6 +31,7 @@ export default class MyComponent extends React.Component {
     home: HomeRoute,
     referral: ReferralRoute,
     reward: RewardRoute,
+    profile: ProfileRoute,
   });
 
   render() {

@@ -33,7 +33,7 @@ function DetailReward_Hadiah({ navigation }) {
                 </Chip>
               </View>
               <Text style={styles.descCardKeterangan}>
-                Hadiah akan dikirimkan pada tanggal 20 Mei 2020
+                Hadiah akan dikirimkan pada tanggal 21 Mei 2020
               </Text>
               <Text style={styles.title}>Syarat & Ketentuan</Text>
               <Text style={styles.descCard}>
