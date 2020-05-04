@@ -1,7 +1,8 @@
-# MarketingFans
+# Marketing Merchant
 
 1. Instal dulu
-    > npm install
+
+   > npm install
 
 2. Jalanin Expo
-    > expo start
+   > expo start
