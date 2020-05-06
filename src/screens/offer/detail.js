@@ -6,15 +6,23 @@ import {
   View,
   StyleSheet,
   SafeAreaView,
+  useColorScheme,
 } from "react-native";
-import { Card, IconButton, Button, FAB, Paragraph } from "react-native-paper";
+import {
+  Card,
+  IconButton,
+  Button,
+  FAB,
+  Paragraph,
+  Colors,
+} from "react-native-paper";
 import Header from "../../components/Header";
 import { color, tw } from "react-native-tailwindcss";
 import Animated from "react-native-reanimated";
 import ActionSheetInner from "../../components/ActionSheetInner";
 import ActionSheetHeader from "../../components/ActionSheetHeader";
 import BottomSheet from "reanimated-bottom-sheet";
-import { Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import Constants from "expo-constants";
 
 function index({ navigation }) {
@@ -39,20 +47,21 @@ function index({ navigation }) {
         initialSnap={0}
         enabledInnerScrolling={false}
       />
-      <SafeAreaView
-        forceInset={{ top: "always" }}
-        style={[tw.bgPurple800, tw.flex1]}
-      >
+
+      <View style={{ backgroundColor: "#2c2c2f" }}>
+        <Animated.View
+          onPress={handleOutsidePress}
+          style={{
+            backgroundColor: "#2c2c2f",
+            opacity: Animated.add(0.1, Animated.multiply(fall, 0.9)),
+          }}
+        >
+          <Header titleText="Offer Detail" navigation={navigation}></Header>
+        </Animated.View>
+      </View>
+
+      <SafeAreaView forceInset={{ top: "always" }} style={[tw.flex1]}>
         <View style={{ backgroundColor: "#2c2c2f" }}>
-          <Animated.View
-            onPress={handleOutsidePress}
-            style={{
-              backgroundColor: "#fff",
-              opacity: Animated.add(0.1, Animated.multiply(fall, 0.9)),
-            }}
-          >
-            <Header titleText="Offer Detail" navigation={navigation}></Header>
-          </Animated.View>
           <Animated.ScrollView
             showsVerticalScrollIndicator={false}
             onPress={handleOutsidePress}
@@ -64,7 +73,7 @@ function index({ navigation }) {
             <TouchableWithoutFeedback onPress={handleOutsidePress}>
               <Card style={[tw.mB32]}>
                 <Card.Title
-                  title="Ripped Jeans Company"
+                  title="Voyej DGR Discount"
                   subtitle="Bandung, Jawa Barat"
                   style={[tw.borderB, tw.borderGray400]}
                   // left={(props) => <Avatar.Icon {...props} icon="folder" />}
@@ -83,10 +92,9 @@ function index({ navigation }) {
                 <Card.Content>
                   <View style={[tw.mB4]}>
                     <Paragraph style={[tw.mY5]}>
-                      RPJ sedang mengadakan promo Ripped Gokil demi merayakan
+                      Voyej sedang mengadakan promo Yejj Gokil demi merayakan
                       acara Distinguished Gentleman's Ride yang akan
-                      diselenggarakan di Bali tahun ini. Semua produk diskon
-                      20%!
+                      diselenggarakan di Bali tahun ini. Semua produk diskon 20%
                     </Paragraph>
                     <Paragraph style={[tw.textGray700]}>
                       Terms of Campaign:{"\n"}
@@ -123,9 +131,9 @@ function index({ navigation }) {
                       />
                     </View>
                     <View style={[tw.itemsStart]}>
-                      <Button icon="instagram">@rippedjeansbro</Button>
+                      <Button icon="instagram">@voyej</Button>
                       <Button icon="whatsapp">+62 8121554****</Button>
-                      <Button icon="link">http://rpj.com</Button>
+                      <Button icon="link">http://voyej.com</Button>
                     </View>
                   </View>
                 </Card.Content>
@@ -134,61 +142,32 @@ function index({ navigation }) {
           </Animated.ScrollView>
         </View>
       </SafeAreaView>
-      <Animated.View
-        onPress={handleOutsidePress}
-        style={{
-          opacity: Animated.add(0.1, Animated.multiply(fall, 0.9)),
-        }}
-      >
-        <TouchableOpacity
-          activeOpacity={0.1}
+      <View style={{ backgroundColor: "#2c2c2f" }}>
+        <Animated.View
+          onPress={handleOutsidePress}
           style={{
-            position: "absolute",
-            bottom: 0,
-            right: 0,
-            left: 0,
-          }}
-          activeOpacity={0.9}
-          onPress={() => {
-            bs.current.snapTo(1);
-            bs.current.snapTo(1);
+            backgroundColor: "#fff",
+            opacity: Animated.add(0.1, Animated.multiply(fall, 0.9)),
           }}
         >
-          <Animated.View
-            style={{
-              position: "absolute",
-              bottom: 0,
-              right: 0,
-              left: 0,
-              backgroundColor: "#fff",
-              height: 75,
-              opacity: Animated.sub(Animated.multiply(fall, 0.9), 0.1),
-            }}
-          />
-          <View
-            style={[
-              tw.shadowLg,
-              tw.flexRow,
-              tw.justifyCenter,
-              tw.itemsCenter,
-              tw.bgPurple700,
-              tw.pY2,
-              tw.rounded,
-              tw.m5,
-            ]}
-          >
-            <Ionicons
-              style={[tw.mR2]}
-              name="ios-share"
-              size={25}
-              color={color.purple200}
-            />
-            <Text style={[tw.textPurple100, tw.fontBold, tw.textBase, tw.pT1]}>
-              BAGIKAN
-            </Text>
-          </View>
-        </TouchableOpacity>
-      </Animated.View>
+          <SafeAreaView>
+            <Button
+              icon="square-edit-outline"
+              mode="contained"
+              labelStyle={[tw.textBase]}
+              style={[tw.mB2, tw.mX3]}
+              contentStyle={[tw.m1]}
+              theme={{ roundness: 5 }}
+              onPress={() => {
+                bs.current.snapTo(1);
+                bs.current.snapTo(1);
+              }}
+            >
+              Edit
+            </Button>
+          </SafeAreaView>
+        </Animated.View>
+      </View>
     </>
   );
 }

@@ -23,7 +23,7 @@ export default class index extends Component {
         <SafeAreaView>
           <ScrollView showsVerticalScrollIndicator={false}>
             <View style={[tw.minHFull]}>
-              <View style={[tw.p5, tw.bgWhite]}>
+              <View style={[tw.p5, tw.bgWhite, tw.mB8]}>
                 <View style={[tw.flexRow]}>
                   <Surface
                     style={[tw.p2, tw.mR4, tw.roundedLg, { elevation: 2 }]}
@@ -47,18 +47,22 @@ export default class index extends Component {
                     >
                       Voyej Leather Goods
                     </Text>
-                    <View style={[tw.mT1, tw.flexRow, tw.itemsCenter]}>
-                      <Text
-                        style={[tw.textXl, tw.fontSemibold, tw.textGray500]}
-                      >
-                        Rp 1.500.000
-                      </Text>
+                    <View style={[tw.mT2, tw.flexRow, tw.itemsCenter]}>
                       <MaterialCommunityIcons
-                        name="arrow-up-circle"
-                        color={color.green400}
-                        size={20}
-                        style={[tw.mL1]}
+                        name="map-marker"
+                        size={15}
+                        color={color.gray600}
                       />
+                      <Text
+                        style={[
+                          tw.mL1,
+                          tw.textLg,
+                          tw.fontSemibold,
+                          tw.textGray600,
+                        ]}
+                      >
+                        Bandung, Jawa Barat
+                      </Text>
                     </View>
                   </View>
                 </View>

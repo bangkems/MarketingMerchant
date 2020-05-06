@@ -19,15 +19,20 @@ export default class Offer extends Component {
           <View style={[tw.flexRow, tw.justifyBetween, tw.itemsCenter]}>
             <View style={[tw.flexCol]}>
               <View style={[tw.flexRow, tw.itemsCenter, tw._mB2, tw._mL2]}>
-                <IconButton icon="hanger" size={25} color={color.indigo400} />
-                <Text style={[tw.textLg, tw._mL2, tw.textIndigo400]}>
-                  Fashion
-                </Text>
+                <IconButton icon="account" size={25} color={color.green600} />
+                <View>
+                  <Text style={[tw.textBase, tw._mL2, tw.textGreen600]}>
+                    12 Referral
+                  </Text>
+                  <Text style={[tw.textXs, tw._mL2, tw.textGreen600]}>
+                    Dari 2 influencer
+                  </Text>
+                </View>
               </View>
             </View>
-            <View style={[tw.mX4]} />
+            <View style={[tw.mX6]} />
             <View style={[tw.itemsEnd]}>
-              <Text style={[tw.textLg, tw.fontBold, tw.textGray800]}>
+              <Text style={[tw.textLg, tw.fontMedium, tw.textGray800]}>
                 Rp 50.000
               </Text>
               <Text style={[tw.textXs, tw._mT1]}>per transaksi</Text>

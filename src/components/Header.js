@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Appbar, Title } from "react-native-paper";
+import { Appbar, Title, Colors } from "react-native-paper";
 import { tw } from "react-native-tailwindcss";
 import NavigationService from "../navigation/NavigationService";
 
@@ -12,7 +12,7 @@ function Header({ titleText, hideBackButton, hideActionButton }) {
         style={hideBackButton ? tw.hidden : tw.block}
       />
       <View style={[styles.container]}>
-        <Title style={styles.title}>{titleText}</Title>
+        <Title style={[tw.textWhite]}>{titleText}</Title>
       </View>
       <Appbar.Action
         icon="dots-horizontal"
@@ -28,9 +28,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-  },
-  title: {
-    color: "#FFF",
   },
 });
 

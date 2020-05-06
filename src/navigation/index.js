@@ -16,7 +16,6 @@ import Referral from "../screens/referral";
 import DetailReferral from "../screens/referral/DetailReferral";
 import UbahKodeReferral from "../screens/referral/UbahKodeReferral";
 
-
 const StackNavigator = createStackNavigator(
   {
     IndexScreen: {
@@ -63,10 +62,10 @@ const StackNavigator = createStackNavigator(
     },
     UbahKodeReferral: {
       screen: UbahKodeReferral,
-    }
+    },
   },
   {
-    initialRouteName: "OnboardingFans",
+    initialRouteName: "IndexScreen",
     headerMode: "none",
     defaultNavigationOptions: {
       cardStyle: { backgroundColor: "#FFF" },

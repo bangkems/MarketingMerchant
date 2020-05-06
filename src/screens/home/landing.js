@@ -10,48 +10,37 @@ export class landing extends Component {
   render() {
     return (
       <>
-        <View style={[tw.pT3, tw.pX4, tw.bgWhite]}>
-          <View style={[tw.flexRow, tw.itemsEnd]}>
+        <View style={[tw.pX4, tw.bgWhite]}>
+          <View style={[tw.pY2, tw.flexRow, tw.itemsEnd]}>
             <Headline style={[tw.fontMedium]}>Performa</Headline>
             <Caption style={[tw.mX1, tw.mB1]}>(30 hari terakhir)</Caption>
           </View>
           <View style={[tw.mY2, tw.flexRow, tw.justifyBetween]}>
             <View>
-              <Text style={[tw.textLg, tw.fontMedium, tw.textGray900]}>
-                Referral
-              </Text>
-              <Text
-                style={[
-                  tw.mT1,
-                  tw.w10_12,
-                  tw.textXs,
-                  tw.fontMedium,
-                  tw.textGray700,
-                ]}
-              >
+              <Text style={[tw.textLg, tw.textGray900]}>Referral</Text>
+              <Text style={[tw.mT1, tw.w10_12, tw.textXs, tw.textGray700]}>
                 Referral baru yang terdaftar melalui semua link offer mu
               </Text>
             </View>
-            <Text style={[tw.textLg, tw.fontMedium, tw.textGray900]}>12</Text>
+            <Text style={[tw.textLg, tw.textGray900]}>12</Text>
           </View>
           <View style={[tw.mY2, tw.flexRow, tw.justifyBetween]}>
             <View>
-              <Text style={[tw.textLg, tw.fontMedium, tw.textGray900]}>
-                Offer Clicks
-              </Text>
-              <Text
-                style={[
-                  tw.mT1,
-                  tw.w10_12,
-                  tw.textXs,
-                  tw.fontMedium,
-                  tw.textGray700,
-                ]}
-              >
+              <Text style={[tw.textLg, tw.textGray900]}>Offer Clicks</Text>
+              <Text style={[tw.mT1, tw.w10_12, tw.textXs, tw.textGray700]}>
                 Jumlah klik dari semua penawaran yang kamu miliki
               </Text>
             </View>
-            <Text style={[tw.textLg, tw.fontMedium, tw.textGray900]}>114</Text>
+            <Text style={[tw.textLg, tw.textGray900]}>114</Text>
+          </View>
+          <View style={[tw.mY2, tw.flexRow, tw.justifyBetween]}>
+            <View>
+              <Text style={[tw.textLg, tw.textGray900]}>Value Generated</Text>
+              <Text style={[tw.mT1, tw.w10_12, tw.textXs, tw.textGray700]}>
+                Pendapatan yang dihasilkan dari semua referral
+              </Text>
+            </View>
+            <Text style={[tw.textLg, tw.textGray900]}>Rp 560k</Text>
           </View>
           <View
             style={[
@@ -60,6 +49,7 @@ export class landing extends Component {
               tw.pY2,
               tw.mT4,
               tw.flexRow,
+              tw.justifyBetween,
               tw.itemsCenter,
               tw.borderY,
               tw.borderGray400,
@@ -68,8 +58,8 @@ export class landing extends Component {
             <Text style={[tw.textBase]}>Lihat traffic</Text>
             <MaterialCommunityIcons
               name="chevron-right"
-              color={color.gray800}
-              size={21}
+              color={color.gray700}
+              size={26}
               style={{ marginTop: 2 }}
             />
           </View>
