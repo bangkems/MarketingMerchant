@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { SafeAreaView, ScrollView, Text, View, StyleSheet } from "react-native";
+import { SafeAreaView, ScrollView, Text, View, Image } from "react-native";
 import Landing from "./landing";
 import Results from "./results";
 import { color, tw } from "react-native-tailwindcss";
-import { Searchbar, IconButton, Surface } from "react-native-paper";
+import { Surface } from "react-native-paper";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default class index extends Component {
   state = {
@@ -17,43 +18,50 @@ export default class index extends Component {
   };
 
   render() {
-    const { searchQuery } = this.state;
     return (
       <>
         <SafeAreaView>
-          <ScrollView
-            style={[tw.bgPurple800, tw.minHFull]}
-            showsVerticalScrollIndicator={false}
-          >
-            <View style={[tw.bgWhite, tw.minHFull]}>
-              <View style={[tw.bgPurple800, tw.pX4, tw.pT4]}>
-                <Text style={[tw.textXl, tw.fontMedium, tw.textPurple100]}>
-                  Poin anda
-                </Text>
-                <View style={[tw.mT1, tw.flexRow, tw.justifyBetween]}>
-                  <Text
-                    style={[
-                      tw.text3xl,
-                      tw.fontBold,
-                      tw.textPurple100,
-                      tw.trackingTight,
-                    ]}
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <View style={[tw.minHFull]}>
+              <View style={[tw.p5, tw.bgWhite]}>
+                <View style={[tw.flexRow]}>
+                  <Surface
+                    style={[tw.p2, tw.mR4, tw.roundedLg, { elevation: 2 }]}
                   >
-                    Rp. 150.000
-                  </Text>
-                  <IconButton
-                    icon="history"
-                    size={30}
-                    color={color.indigo100}
-                    style={[tw.pB2, tw.m0]}
-                  />
+                    <Image
+                      style={{ width: 50, height: 50, borderRadius: 12 }}
+                      source={{
+                        uri:
+                          "https://pbs.twimg.com/profile_images/1179195936/VOYEJ_Concho_twtr_copy_400x400.jpg",
+                      }}
+                    />
+                  </Surface>
+                  <View>
+                    <Text
+                      style={[
+                        tw.text2xl,
+                        tw.fontBold,
+                        tw.textGray800,
+                        tw.trackingTight,
+                      ]}
+                    >
+                      Voyej Leather Goods
+                    </Text>
+                    <View style={[tw.mT1, tw.flexRow, tw.itemsCenter]}>
+                      <Text
+                        style={[tw.textXl, tw.fontSemibold, tw.textGray500]}
+                      >
+                        Rp 1.500.000
+                      </Text>
+                      <MaterialCommunityIcons
+                        name="arrow-up-circle"
+                        color={color.green400}
+                        size={20}
+                        style={[tw.mL1]}
+                      />
+                    </View>
+                  </View>
                 </View>
-                <Searchbar
-                  placeholder="Cari offer terbaru"
-                  onChangeText={this._onChangeSearch}
-                  value={searchQuery}
-                  style={[tw._mB3, tw.mT1, tw.rounded]}
-                />
               </View>
               {this.displayResult()}
             </View>
@@ -73,21 +81,4 @@ export default class index extends Component {
       return <Results query={this.state.searchQuery}></Results>;
     }
   }
-  // displayFABFilter() {
-  //   if (!this.hideResult) {
-  //     return (
-  //       <View style={[tw.absolute, tw.bottom0, tw.right0, tw.left0]}>
-  //         <View style={[tw.flex, tw.itemsCenter]}>
-  //           <FAB
-  //             small
-  //             label="Filter"
-  //             icon="filter-variant"
-  //             onPress={this._onStateChange}
-  //             style={[tw.w4_12, tw.m3]}
-  //           />
-  //         </View>
-  //       </View>
-  //     );
-  //   }
-  // }
 }

@@ -6,15 +6,13 @@ import NavigationService from "../navigation/NavigationService";
 
 function Header({ titleText, hideBackButton, hideActionButton }) {
   return (
-    <Appbar.Header style={titleText == "Home" ? tw.h4 : tw.justifyBetween}>
+    <Appbar.Header style={tw.justifyBetween}>
       <Appbar.BackAction
         onPress={() => NavigationService.back()}
         style={hideBackButton ? tw.hidden : tw.block}
       />
       <View style={[styles.container]}>
-        <Title style={styles.title}>
-          {titleText == "Home" ? "" : titleText}
-        </Title>
+        <Title style={styles.title}>{titleText}</Title>
       </View>
       <Appbar.Action
         icon="dots-horizontal"

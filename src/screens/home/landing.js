@@ -1,106 +1,111 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
-import { Paragraph, IconButton, Card, Button, List } from "react-native-paper";
+import { Text, View, ScrollView } from "react-native";
+import { Headline, Caption, Card, List } from "react-native-paper";
 import { color, tw } from "react-native-tailwindcss";
 import Offer from "../../components/Offer";
 import NavigationService from "../../navigation/NavigationService";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 export class landing extends Component {
   render() {
     return (
       <>
-        <View style={[tw.mB3, tw.mX4]}>
-          <View style={[tw.flex, tw.flexRow, tw.mY5]}>
-            <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
-              <IconButton
-                icon="airplane"
-                color={color.indigo400}
-                size={30}
-                onPress={() =>
-                  NavigationService.navigate("OfferScreen", {
-                    tags: "travel",
-                  })
-                }
-              />
-              <Paragraph style={[tw.textIndigo600, tw.textSm, tw.fontMedium]}>
-                Travel
-              </Paragraph>
+        <View style={[tw.pT3, tw.pX4, tw.bgWhite]}>
+          <View style={[tw.flexRow, tw.itemsEnd]}>
+            <Headline style={[tw.fontMedium]}>Performa</Headline>
+            <Caption style={[tw.mX1, tw.mB1]}>(30 hari terakhir)</Caption>
+          </View>
+          <View style={[tw.mY2, tw.flexRow, tw.justifyBetween]}>
+            <View>
+              <Text style={[tw.textLg, tw.fontMedium, tw.textGray900]}>
+                Referral
+              </Text>
+              <Text
+                style={[
+                  tw.mT1,
+                  tw.w10_12,
+                  tw.textXs,
+                  tw.fontMedium,
+                  tw.textGray700,
+                ]}
+              >
+                Referral baru yang terdaftar melalui semua link offer mu
+              </Text>
             </View>
-            <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
-              <IconButton
-                icon="food"
-                color={color.indigo400}
-                size={30}
-                onPress={() =>
-                  NavigationService.navigate("OfferScreen", {
-                    tags: "makanan",
-                  })
-                }
-              />
-              <Paragraph style={[tw.textIndigo600, tw.textSm, tw.fontMedium]}>
-                Makanan
-              </Paragraph>
+            <Text style={[tw.textLg, tw.fontMedium, tw.textGray900]}>12</Text>
+          </View>
+          <View style={[tw.mY2, tw.flexRow, tw.justifyBetween]}>
+            <View>
+              <Text style={[tw.textLg, tw.fontMedium, tw.textGray900]}>
+                Offer Clicks
+              </Text>
+              <Text
+                style={[
+                  tw.mT1,
+                  tw.w10_12,
+                  tw.textXs,
+                  tw.fontMedium,
+                  tw.textGray700,
+                ]}
+              >
+                Jumlah klik dari semua penawaran yang kamu miliki
+              </Text>
             </View>
-            <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
-              <IconButton
-                icon="hanger"
-                color={color.indigo400}
-                size={30}
-                onPress={() =>
-                  NavigationService.navigate("OfferScreen", {
-                    tags: "Fashion",
-                  })
-                }
-              />
-              <Paragraph style={[tw.textIndigo600, tw.textSm, tw.fontMedium]}>
-                Fashion
-              </Paragraph>
-            </View>
-            <View style={[tw.m1, tw.flexGrow, tw.itemsCenter]}>
-              <IconButton
-                icon="dots-horizontal"
-                color={color.indigo400}
-                size={30}
-                onPress={() =>
-                  NavigationService.navigate("OfferScreen", {
-                    tags: "",
-                  })
-                }
-              />
-              <Paragraph style={[tw.textIndigo600, tw.textSm, tw.fontMedium]}>
-                More
-              </Paragraph>
-            </View>
+            <Text style={[tw.textLg, tw.fontMedium, tw.textGray900]}>114</Text>
+          </View>
+          <View
+            style={[
+              tw.pX5,
+              tw._mX5,
+              tw.pY2,
+              tw.mT4,
+              tw.flexRow,
+              tw.itemsCenter,
+              tw.borderY,
+              tw.borderGray400,
+            ]}
+          >
+            <Text style={[tw.textBase]}>Lihat traffic</Text>
+            <MaterialCommunityIcons
+              name="chevron-right"
+              color={color.gray800}
+              size={21}
+              style={{ marginTop: 2 }}
+            />
+          </View>
+        </View>
+        <View style={[tw.mY3, tw.mX4]}>
+          <View style={[tw.mY3]}>
+            <Text style={[tw.mB2, tw.text2xl, tw.fontBold, tw.textGray700]}>
+              My Offer
+            </Text>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              style={[tw._mX4, tw.pX2]}
+            >
+              <Offer />
+              <Offer />
+              <Offer />
+            </ScrollView>
           </View>
           <View>
-            <Text
-              style={[tw.mT3, tw.mB2, tw.text2xl, tw.fontBold, tw.textGray700]}
-            >
-              Penawaran terbaru
-            </Text>
-            <Offer></Offer>
-            <Offer></Offer>
-            <Offer></Offer>
-            <Button style={[tw.mY2]}>Lihat semua penawaran</Button>
-          </View>
-          <View>
-            <Text
-              style={[tw.mT3, tw.mB2, tw.text2xl, tw.fontBold, tw.textGray700]}
-            >
-              Panduan
-            </Text>
-            <Card
-              style={[
-                tw.mX2,
-                tw.mY2,
-                tw.shadowMd,
-                tw.border2,
-                tw.borderPurple300,
-                tw.roundedLg,
-              ]}
-            >
+            <Card style={[tw._mX4, tw.mY2]}>
+              <Text
+                style={[
+                  tw.mT3,
+                  tw.mX4,
+                  tw.mB2,
+                  tw.text2xl,
+                  tw.fontBold,
+                  tw.textGray700,
+                ]}
+              >
+                Panduan
+              </Text>
               <Card.Content>
                 <List.Item
-                  title="Dapatkan lebih banyak"
+                  title="Membaca tingkat penjualan"
                   left={(props) => (
                     <List.Icon {...props} icon="gift" style={[tw.mX0]} />
                   )}
@@ -133,7 +138,7 @@ export class landing extends Component {
                   style={[tw.borderB, tw.borderGray200]}
                 />
                 <List.Item
-                  title="Membangun Audiens"
+                  title="Membangun Brandmu"
                   left={(props) => (
                     <List.Icon {...props} icon="bullhorn" style={[tw.mX0]} />
                   )}

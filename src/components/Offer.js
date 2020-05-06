@@ -14,10 +14,7 @@ export default class Offer extends Component {
           })
         }
       >
-        <Card.Title
-          title="Ripped Jeans Company"
-          subtitle="Bandung, Jawa Barat"
-        />
+        <Card.Title title="Voyej DGR Discount" subtitle="Bandung, Jawa Barat" />
         <Card.Content>
           <View style={[tw.flexRow, tw.justifyBetween, tw.itemsCenter]}>
             <View style={[tw.flexCol]}>
@@ -28,6 +25,7 @@ export default class Offer extends Component {
                 </Text>
               </View>
             </View>
+            <View style={[tw.mX4]} />
             <View style={[tw.itemsEnd]}>
               <Text style={[tw.textLg, tw.fontBold, tw.textGray800]}>
                 Rp 50.000
