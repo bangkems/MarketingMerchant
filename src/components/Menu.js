@@ -2,13 +2,13 @@ import * as React from "react";
 import { BottomNavigation, Text } from "react-native-paper";
 import Header from "./Header";
 import Home from "../screens/home";
-import Referral from "../screens/referral";
+import Offer from "../screens/offer/createoffer";
 import Reward from "../screens/reward";
 import Profile from "../screens/profile";
 
 const HomeRoute = () => <Home />;
 
-const ReferralRoute = () => <Referral />;
+const OfferRoute = () => <Offer />;
 
 const RewardRoute = () => <Reward />;
 
@@ -19,7 +19,7 @@ export default class MyComponent extends React.Component {
     index: 0,
     routes: [
       { key: "home", title: "Home", icon: "home" },
-      { key: "referral", title: "Referral", icon: "link" },
+      { key: "offer", title: "Offer", icon: "tag" },
       { key: "reward", title: "My Rewards", icon: "gift" },
       { key: "profile", title: "My Profile", icon: "face" },
     ],
@@ -29,7 +29,7 @@ export default class MyComponent extends React.Component {
 
   _renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
-    referral: ReferralRoute,
+    offer: OfferRoute,
     reward: RewardRoute,
     profile: ProfileRoute,
   });
