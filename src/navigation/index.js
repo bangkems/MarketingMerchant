@@ -53,9 +53,6 @@ const StackNavigator = createStackNavigator(
     UbahDetailRekening: {
       screen: UbahDetailRekening,
     },
-    DetailReward_Hadiah: {
-      screen: DetailReward_Hadiah,
-    },
     Profile: {
       screen: Profile,
     },

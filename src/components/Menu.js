@@ -2,8 +2,8 @@ import * as React from "react";
 import { BottomNavigation, Text } from "react-native-paper";
 import Header from "./Header";
 import Home from "../screens/home";
+import Validasi from "../screens/validasi";
 import Offer from "../screens/offer/createoffer";
-import Reward from "../screens/reward";
 import Profile from "../screens/profile";
 
 const HomeRoute = () => <Home />;
@@ -20,7 +20,7 @@ export default class MyComponent extends React.Component {
     routes: [
       { key: "home", title: "Home", icon: "home" },
       { key: "offer", title: "Offer", icon: "tag" },
-      { key: "reward", title: "My Rewards", icon: "gift" },
+      { key: "validasi", title: "Validasi", icon: "check-circle-outline" },
       { key: "profile", title: "My Profile", icon: "face" },
     ],
   };
@@ -29,8 +29,8 @@ export default class MyComponent extends React.Component {
 
   _renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
+    validasi: ValidasiRoute,
     offer: OfferRoute,
-    reward: RewardRoute,
     profile: ProfileRoute,
   });
 
