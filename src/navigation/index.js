@@ -4,8 +4,9 @@ import IndexScreen from "../screens";
 import OfferScreen from "../screens/offer/index";
 import OfferDetail from "../screens/offer/detail";
 import OfferCreate from "../screens/offer/createoffer";
+import OTP from "../screens/OTP"
 import Login from "../screens/OTP/Login";
-import Welcome from "../screens/OTP/Welcome";
+import LoginKirimUlang from "../screens/OTP/LoginKirimUlang";
 import OnboardingFans from "../screens/onboarding";
 import MyRewards from "../screens/reward";
 import DetailReward from "../screens/reward/DetailReward";
@@ -33,8 +34,11 @@ const StackNavigator = createStackNavigator(
     Login: {
       screen: Login,
     },
-    Welcome: {
-      screen: Welcome,
+    LoginKirimUlang: {
+      screen: LoginKirimUlang
+    },
+    OTP: {
+      screen: OTP,
     },
     OnboardingFans: {
       screen: OnboardingFans,
@@ -65,7 +69,7 @@ const StackNavigator = createStackNavigator(
     }
   },
   {
-    initialRouteName: "IndexScreen",
+    initialRouteName: "OTP",
     headerMode: "none",
     defaultNavigationOptions: {
       cardStyle: { backgroundColor: "#FFF" },
