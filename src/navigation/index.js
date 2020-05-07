@@ -7,10 +7,8 @@ import OTP from "../screens/OTP"
 import Login from "../screens/OTP/Login";
 import LoginKirimUlang from "../screens/OTP/LoginKirimUlang";
 import OnboardingFans from "../screens/onboarding";
-import MyRewards from "../screens/reward";
-import DetailReward from "../screens/reward/DetailReward";
-import DetailReward_Komisi from "../screens/reward/DetailReward_Komisi";
-import DetailReward_Hadiah from "../screens/reward/DetailReward_Hadiah";
+import Validasi from "../screens/validasi"
+import Validasi_Form from "../screens/validasi/FormValidasi"
 import UbahDetailPengiriman from "../screens/reward/UbahDetailPengiriman";
 import UbahDetailRekening from "../screens/reward/UbahDetailRekening";
 import Referral from "../screens/referral";
@@ -40,23 +38,17 @@ const StackNavigator = createStackNavigator(
     OnboardingFans: {
       screen: OnboardingFans,
     },
-    MyRewards: {
-      screen: MyRewards,
+    Validasi: {
+      screen: Validasi
     },
-    DetailReward: {
-      screen: DetailReward,
+    Validasi_Form: {
+      screen: Validasi_Form
     },
     UbahDetailPengiriman: {
       screen: UbahDetailPengiriman,
     },
-    DetailReward_Komisi: {
-      screen: DetailReward_Komisi,
-    },
     UbahDetailRekening: {
       screen: UbahDetailRekening,
-    },
-    DetailReward_Hadiah: {
-      screen: DetailReward_Hadiah,
     },
     Referral: {
       screen: Referral,
