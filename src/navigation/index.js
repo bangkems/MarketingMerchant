@@ -3,6 +3,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import IndexScreen from "../screens";
 import OfferScreen from "../screens/offer/index";
 import OfferDetail from "../screens/offer/detail";
+import OfferCreate from "../screens/offer/createoffer";
 import OTP from "../screens/OTP"
 import Login from "../screens/OTP/Login";
 import LoginKirimUlang from "../screens/OTP/LoginKirimUlang";
@@ -11,9 +12,8 @@ import Validasi from "../screens/validasi"
 import Validasi_Form from "../screens/validasi/FormValidasi"
 import UbahDetailPengiriman from "../screens/reward/UbahDetailPengiriman";
 import UbahDetailRekening from "../screens/reward/UbahDetailRekening";
-import Referral from "../screens/referral";
-import DetailReferral from "../screens/referral/DetailReferral";
-import UbahKodeReferral from "../screens/referral/UbahKodeReferral";
+import Profile from "../screens/profile";
+import UpdateProfileMerchant from "../screens/profile/UpdateProfileMerchant";
 
 const StackNavigator = createStackNavigator(
   {
@@ -25,6 +25,9 @@ const StackNavigator = createStackNavigator(
     },
     OfferDetail: {
       screen: OfferDetail,
+    },
+    OfferCreate: {
+      screen: OfferCreate,
     },
     Login: {
       screen: Login,
@@ -50,15 +53,15 @@ const StackNavigator = createStackNavigator(
     UbahDetailRekening: {
       screen: UbahDetailRekening,
     },
-    Referral: {
-      screen: Referral,
+    DetailReward_Hadiah: {
+      screen: DetailReward_Hadiah,
     },
-    DetailReferral: {
-      screen: DetailReferral,
+    Profile: {
+      screen: Profile,
     },
-    UbahKodeReferral: {
-      screen: UbahKodeReferral,
-    },
+    UpdateProfileMerchant: {
+      screen: UpdateProfileMerchant,
+    }
   },
   {
     initialRouteName: "OTP",
