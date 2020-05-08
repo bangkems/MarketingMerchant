@@ -77,6 +77,9 @@ export default class App extends Component {
               keyboardType='phone-pad'
             />
 
+          
+          <Button style={styles.button} mode="contained" onPress={this._onToggleSnackBar}>Ubah Profil</Button>
+
           <Snackbar
             style={styles.snackbar}
             visible={visible}
@@ -91,7 +94,6 @@ export default class App extends Component {
             Profil merchant kamu berhasil diperbarui!
           </Snackbar>
 
-          <Button style={styles.button} mode="contained" onPress={this._onToggleSnackBar}>Ubah Profil</Button>
 
         </View>
       </ScrollView>

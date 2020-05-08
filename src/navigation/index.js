@@ -4,6 +4,8 @@ import IndexScreen from "../screens";
 import OfferScreen from "../screens/offer/index";
 import OfferDetail from "../screens/offer/detail";
 import OfferCreate from "../screens/offer/createoffer";
+import BenefitPelanggan from "../screens/offer/benefitpelanggan";
+import BenefitFans from "../screens/offer/benefitfans";
 import OTP from "../screens/OTP"
 import Login from "../screens/OTP/Login";
 import LoginKirimUlang from "../screens/OTP/LoginKirimUlang";
@@ -29,6 +31,12 @@ const StackNavigator = createStackNavigator(
     },
     OfferCreate: {
       screen: OfferCreate,
+    },
+    BenefitPelanggan: {
+      screen: BenefitPelanggan,
+    },
+    BenefitFans: {
+      screen: BenefitFans,
     },
     Login: {
       screen: Login,
