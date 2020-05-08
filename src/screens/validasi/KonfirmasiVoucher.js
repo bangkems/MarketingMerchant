@@ -1,16 +1,15 @@
 import React from 'react'
 import { StyleSheet, View, ScrollView } from 'react-native'
 import { Avatar, Paragraph, Text, Title, Button} from 'react-native-paper'
-import HeaderBack from '../../components/HeaderBack'
+import Header from '../../components/Header'
 
 
 function KonfirmasiVoucher({ navigation }) {
   return (
     <>
-    <HeaderBack titleText="Konfirmasi Voucher" backButton={ () => navigation.goBack() }></HeaderBack>
+    <Header titleText="Konfirmasi Voucher"/>
     <View style={styles.containerKonfirmasi}>
           <Title style={styles.title}>Voucher Ditemukan!</Title>
-          <Paragraph style={styles.subtitle}>Berikut ini informasi yang terdaftar pada sistem berkaitan dengan voucher tersebut</Paragraph>
     </View>
     <View style={styles.container}>
           <ScrollView>

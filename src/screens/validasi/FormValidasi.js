@@ -2,9 +2,10 @@ import React from 'react'
 import { StyleSheet, View, ScrollView } from 'react-native'
 import { Avatar, Paragraph, TextInput, Button} from 'react-native-paper'
 import Header from "../../components/Header"
+import NavigationService from "../../navigation/NavigationService";
 
 
-function FormValidasi({ navigation }) {
+function FormValidasi() {
   return (
     <>
     <Header titleText="Form Validasi"/>
@@ -26,7 +27,7 @@ function FormValidasi({ navigation }) {
         label="Kode Voucher"
         mode="outlined"
     />
-          <Button style={styles.tombol} mode="contained" onPress={() => navigation.navigate('KonfirmasiVoucher')}>
+          <Button style={styles.tombol} mode="contained" onPress={() => NavigationService.navigate('Validasi_Konfirmasi')}>
           CEK VOUCHER
           </Button>
       </View>

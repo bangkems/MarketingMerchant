@@ -10,6 +10,7 @@ import LoginKirimUlang from "../screens/OTP/LoginKirimUlang";
 import OnboardingFans from "../screens/onboarding";
 import Validasi from "../screens/validasi"
 import Validasi_Form from "../screens/validasi/FormValidasi"
+import Validasi_Konfirmasi from "../screens/validasi/KonfirmasiVoucher"
 import UbahDetailPengiriman from "../screens/reward/UbahDetailPengiriman";
 import UbahDetailRekening from "../screens/reward/UbahDetailRekening";
 import Profile from "../screens/profile";
@@ -46,6 +47,9 @@ const StackNavigator = createStackNavigator(
     },
     Validasi_Form: {
       screen: Validasi_Form
+    },
+    Validasi_Konfirmasi: {
+      screen: Validasi_Konfirmasi
     },
     UbahDetailPengiriman: {
       screen: UbahDetailPengiriman,
