@@ -3,7 +3,7 @@ import { BottomNavigation, Text } from "react-native-paper";
 import Header from "./Header";
 import Home from "../screens/home";
 import Validasi from "../screens/validasi";
-import Offer from "../screens/offer/createoffer";
+import Offer from "../screens/offer/";
 import Profile from "../screens/profile";
 
 const HomeRoute = () => <Home />;
