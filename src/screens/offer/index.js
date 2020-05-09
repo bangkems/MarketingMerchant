@@ -1,45 +1,66 @@
-// import React from "react";
-// import { ScrollView, Text, View, Image } from "react-native";
-// import Header from "../../components/Header";
-// import Offfer from "../../components/Offer";
-// import { color, tw } from "react-native-tailwindcss";
-// import Banner from "../../components/Banner";
-
-// function index({ navigation }) {
-//   const { tags } = navigation.state.params;
-//   return (
-//     <>
-//       <Header titleText="Penawaran tersedia" navigation={navigation}></Header>
-//       <View style={[tw.h2, tw.bgWhite]} />
-//       <Banner></Banner>
-//       <ScrollView showsVerticalScrollIndicator={false}>
-//         <View style={[tw.m5]}>
-//           <View
-//             style={!!tags ? [tw.flexRow, tw.flexWrap, tw.mY2] : [tw.hidden]}
-//           ></View>
-//           <Offfer></Offfer>
-//         </View>
-//       </ScrollView>
-//     </>
-//   );
-// }
-// export default index;
-
-// INI PAGE SEMENTARA YA KRAM BUAT NGARAHIN AJA KE CREATE OFFER, NTAR KALO PUNYAMU UDAH DIGANTI AJA
-import React, { Component } from "react";
-import { View } from "react-native";
-import { Text, Button} from 'react-native-paper'
+import * as React from "react";
+import { View, StyleSheet, Dimensions } from "react-native";
+import { Colors, FAB } from "react-native-paper";
+import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import NavigationService from "../../navigation/NavigationService";
 
+const OngoingRoute = () => <View style={[styles.scene]} />;
 
-export default class index extends Component {
-  render() {
-    return (
-      <View>
-        <Text> Ini adalah page sementara </Text>
-        <Button mode="outlined" onPress={() => NavigationService.navigate("OfferCreate")}>Buat Offer</Button>
-      </View>
-    );
-  }
+const InactiveRoute = () => <View style={[styles.scene]} />;
+
+const initialLayout = { width: Dimensions.get("window").width };
+
+export default function TabViewExample() {
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    { key: "ongoing", title: "Berlangsung" },
+    { key: "inactive", title: "Tidak Aktif" },
+  ]);
+
+  const renderTabBar = (props) => (
+    <TabBar
+      {...props}
+      indicatorStyle={{
+        backgroundColor: Colors.indigo100,
+        height: 4,
+      }}
+      style={{ backgroundColor: Colors.indigo500 }}
+    />
+  );
+
+  const renderScene = SceneMap({
+    ongoing: OngoingRoute,
+    inactive: InactiveRoute,
+  });
+
+  return (
+    <>
+      <TabView
+        navigationState={{ index, routes }}
+        renderScene={renderScene}
+        onIndexChange={setIndex}
+        initialLayout={initialLayout}
+        renderTabBar={renderTabBar}
+      />
+      <FAB
+        style={styles.fab}
+        small
+        icon="plus"
+        label="Tambah Offer"
+        onPress={() => NavigationService.navigate("OfferCreate")}
+      />
+    </>
+  );
 }
 
+const styles = StyleSheet.create({
+  scene: {
+    flex: 1,
+  },
+  fab: {
+    position: "absolute",
+    margin: 16,
+    right: 0,
+    bottom: 0,
+  },
+});

@@ -6,13 +6,13 @@ import OfferDetail from "../screens/offer/detail";
 import OfferCreate from "../screens/offer/createoffer";
 import BenefitPelanggan from "../screens/offer/benefitpelanggan";
 import BenefitFans from "../screens/offer/benefitfans";
-import OTP from "../screens/OTP"
+import OTP from "../screens/OTP";
 import Login from "../screens/OTP/Login";
 import LoginKirimUlang from "../screens/OTP/LoginKirimUlang";
 import OnboardingFans from "../screens/onboarding";
-import Validasi from "../screens/validasi"
-import Validasi_Form from "../screens/validasi/FormValidasi"
-import Validasi_Konfirmasi from "../screens/validasi/KonfirmasiVoucher"
+import Validasi from "../screens/validasi";
+import Validasi_Form from "../screens/validasi/FormValidasi";
+import Validasi_Konfirmasi from "../screens/validasi/KonfirmasiVoucher";
 import UbahDetailPengiriman from "../screens/reward/UbahDetailPengiriman";
 import UbahDetailRekening from "../screens/reward/UbahDetailRekening";
 import Profile from "../screens/profile";
@@ -42,7 +42,7 @@ const StackNavigator = createStackNavigator(
       screen: Login,
     },
     LoginKirimUlang: {
-      screen: LoginKirimUlang
+      screen: LoginKirimUlang,
     },
     OTP: {
       screen: OTP,
@@ -51,13 +51,13 @@ const StackNavigator = createStackNavigator(
       screen: OnboardingFans,
     },
     Validasi: {
-      screen: Validasi
+      screen: Validasi,
     },
     Validasi_Form: {
-      screen: Validasi_Form
+      screen: Validasi_Form,
     },
     Validasi_Konfirmasi: {
-      screen: Validasi_Konfirmasi
+      screen: Validasi_Konfirmasi,
     },
     UbahDetailPengiriman: {
       screen: UbahDetailPengiriman,
@@ -70,10 +70,10 @@ const StackNavigator = createStackNavigator(
     },
     UpdateProfileMerchant: {
       screen: UpdateProfileMerchant,
-    }
+    },
   },
   {
-    initialRouteName: "OTP",
+    initialRouteName: "IndexScreen",
     headerMode: "none",
     defaultNavigationOptions: {
       cardStyle: { backgroundColor: "#FFF" },
