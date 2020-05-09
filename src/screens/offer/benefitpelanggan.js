@@ -6,10 +6,14 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 import RadioGroup from 'react-native-radio-buttons-group';
 // yarn add react-native-radio-buttons-group
 
+import Header from "../../components/Header";
+
+
 function BenefitPelanggan({ navigation }) {
   return (
     <>
-      <Appbar.Header>
+      <Header titleText="Buat Penawaran (2/5)" subtitleText="Benefit Bagi Pelanggan"/>
+      {/* <Appbar.Header>
           <Appbar.BackAction
             onPress={() => navigation.navigate('OfferCreate')}
           />
@@ -17,7 +21,7 @@ function BenefitPelanggan({ navigation }) {
             title="Buat Penawaran (2/5)"
             subtitle="Benefit Bagi Pelanggan"
           />
-      </Appbar.Header>
+      </Appbar.Header> */}
       <MyComponent />
       <View style={{backgroundColor: 'white'}}>
         <Button style={styles.button} mode="contained" onPress={() => navigation.navigate('BenefitFans')}>Lanjutkan: Benefit Fans</Button>

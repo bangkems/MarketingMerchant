@@ -11,6 +11,9 @@ import DateTimePickerModal from "react-native-modal-datetime-picker"
 import moment from 'moment'
 import 'moment/locale/id'
 
+import Header from "../../components/Header";
+
+
 function Kalendar() {
     const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   
@@ -60,15 +63,8 @@ function Kalendar() {
 function BenefitFans({ navigation }) {
   return (
     <>
-      <Appbar.Header>
-          <Appbar.BackAction
-            onPress={() => navigation.navigate('BenefitPelanggan')}
-          />
-          <Appbar.Content
-            title="Buat Penawaran (3/5)"
-            subtitle="Benefit Bagi Fans"
-          />
-      </Appbar.Header>
+        <Header titleText="Buat Penawaran (3/5)" subtitleText="Benefit Bagi Fans"/>
+
       <MyComponent />
       <View style={{backgroundColor: 'white'}}>
         <Button style={styles.button} mode="contained" onPress={() => navigation.navigate('Masa Berlaku')}>Lanjutkan: Masa Berlaku</Button>

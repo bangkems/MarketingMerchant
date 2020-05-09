@@ -1,10 +1,10 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Appbar, Title, Colors } from "react-native-paper";
+import { Appbar, Title, Caption, Colors } from "react-native-paper";
 import { tw } from "react-native-tailwindcss";
 import NavigationService from "../navigation/NavigationService";
 
-function Header({ titleText, hideBackButton, hideActionButton }) {
+function Header({ titleText, hideBackButton, hideActionButton, subtitleText }) {
   return (
     <Appbar.Header style={tw.justifyBetween}>
       <Appbar.BackAction
@@ -13,6 +13,7 @@ function Header({ titleText, hideBackButton, hideActionButton }) {
       />
       <View style={[styles.container]}>
         <Title style={[tw.textWhite]}>{titleText}</Title>
+        <Caption style={[tw.textWhite]}>{subtitleText}</Caption>
       </View>
       <Appbar.Action
         icon="dots-horizontal"

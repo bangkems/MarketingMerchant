@@ -7,7 +7,7 @@ import { Formik } from 'formik';
 import { Button, TextInput, Appbar, Text , Paragraph} from 'react-native-paper';
 import { Alert, Keyboard, Image, View, StyleSheet, ScrollView } from 'react-native';
 
-// import Header from "../../components/Header";
+import Header from "../../components/Header";
 
 const initialValues = {
   // title: '',
@@ -17,7 +17,8 @@ const initialValues = {
 function CreateOffer({ navigation }) {
   return (
     <>
-      <Appbar.Header>
+      <Header titleText="Buat Penawaran (1/5)" subtitleText="Nama, deskripsi, dan gambar penawaran"/>
+      {/* <Appbar.Header>
           <Appbar.BackAction
             onPress={() => navigation.navigate('OfferScreen')}
           />
@@ -25,7 +26,7 @@ function CreateOffer({ navigation }) {
             title="Buat Penawaran (1/5)"
             subtitle="Nama, deskripsi, dan gambar penawaran"
           />
-      </Appbar.Header>
+      </Appbar.Header> */}
       <MyComponent />
       <View style={{backgroundColor: 'white'}}>
         <Button style={styles.button} mode="contained" onPress={() => navigation.navigate('BenefitPelanggan')}>Lanjutkan: Benefit Pelanggan</Button>
