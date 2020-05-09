@@ -1,12 +1,22 @@
 import * as React from "react";
-import { View, StyleSheet, Dimensions } from "react-native";
+import { ScrollView, StyleSheet, Dimensions } from "react-native";
 import { Colors, FAB } from "react-native-paper";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import NavigationService from "../../navigation/NavigationService";
+import Ongoing from "./ongoing";
+import Inactive from "./inactive";
 
-const OngoingRoute = () => <View style={[styles.scene]} />;
+const OngoingRoute = () => (
+  <ScrollView>
+    <Ongoing style={[styles.scene]} />
+  </ScrollView>
+);
 
-const InactiveRoute = () => <View style={[styles.scene]} />;
+const InactiveRoute = () => (
+  <ScrollView>
+    <Inactive style={[styles.scene]} />
+  </ScrollView>
+);
 
 const initialLayout = { width: Dimensions.get("window").width };
 
