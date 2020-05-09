@@ -2,9 +2,10 @@ import React from 'react'
 import { StyleSheet, View, ScrollView } from 'react-native'
 import { Avatar, Paragraph, Text, Title, Button} from 'react-native-paper'
 import Header from '../../components/Header'
+import NavigationService from "../../navigation/NavigationService";
 
 
-function KonfirmasiVoucher({ navigation }) {
+function KonfirmasiVoucher() {
   return (
     <>
     <Header titleText="Konfirmasi Voucher"/>
@@ -28,7 +29,7 @@ function KonfirmasiVoucher({ navigation }) {
             <Paragraph style={styles.judulInformasi}>Status Voucher</Paragraph>
             <Text style={styles.isiInformasiValidasi}>VALID</Text>
           </ScrollView>
-          <Button style={styles.tombol} mode="contained" onPress={() => navigation.navigate('Sukses')}>
+          <Button style={styles.tombol} mode="contained" onPress={() => NavigationService.navigate('Validasi_Sukses')}>
           VALIDASI
           </Button>
       </View>
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10
   },
   containerKonfirmasi: {
-    backgroundColor: '#34495e',
+    backgroundColor: '#3f51b5',
     paddingHorizontal: 20,
     paddingVertical: 20
   },
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     paddingVertical: 5,
-    backgroundColor: '#2980b9',
+    backgroundColor: '#3f51b5',
   }
 })
 

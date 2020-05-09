@@ -1,9 +1,10 @@
 import React from 'react'
 import { StyleSheet, View, ScrollView } from 'react-native'
 import { Avatar, Paragraph, Text, Title} from 'react-native-paper'
+import NavigationService from "../../navigation/NavigationService";
 
 
-function Sukses({ navigation }) {
+function Sukses() {
   return (
     <>
     <View style={styles.container}>
@@ -12,7 +13,7 @@ function Sukses({ navigation }) {
     </View>
     <Title style={styles.titleSukses}>Validasi Sukses</Title>
     <Paragraph style={styles.deskripsiSukses}>Voucher berhasil di validasi</Paragraph>
-    <Text style={styles.tombolLink} onPress={() => navigation.navigate('Validasi')}>Kembali ke Menu Validasi</Text>
+    <Text style={styles.tombolLink} onPress={() => NavigationService.navigate('IndexScreen')}>Kembali ke Validasi</Text>
       </View>
     </>
   )

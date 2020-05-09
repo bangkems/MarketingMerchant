@@ -13,6 +13,7 @@ import OnboardingFans from "../screens/onboarding";
 import Validasi from "../screens/validasi";
 import Validasi_Form from "../screens/validasi/FormValidasi";
 import Validasi_Konfirmasi from "../screens/validasi/KonfirmasiVoucher";
+import Validasi_Sukses from "../screens/validasi/Sukses";
 import UbahDetailPengiriman from "../screens/reward/UbahDetailPengiriman";
 import UbahDetailRekening from "../screens/reward/UbahDetailRekening";
 import Profile from "../screens/profile";
@@ -58,6 +59,9 @@ const StackNavigator = createStackNavigator(
     },
     Validasi_Konfirmasi: {
       screen: Validasi_Konfirmasi,
+    },
+    Validasi_Sukses: {
+      screen: Validasi_Sukses,
     },
     UbahDetailPengiriman: {
       screen: UbahDetailPengiriman,
