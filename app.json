@@ -1,7 +1,11 @@
 {
   "expo": {
-    "name": "MarketingFans",
-    "slug": "MarketingFans",
+    "name": "MarketingMerchant",
+    "slug": "MarketingMerchant",
+    "android": {
+      "package": "com.marketingplatform.merchant",
+      "versionCode": 1
+    },
     "platforms": [
       "ios",
       "android",
